@@ -12,9 +12,11 @@
 
 <body>
 	<div class="container">
-
+		<div class="main">
+			<p>Um dolar compra quantos?</p>
+		</div>
+		<svg class="tree" id="tree"></svg>
 	</div>
-	<svg class="tree" id="tree"></svg>
 </body>
 
 </html>

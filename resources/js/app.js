@@ -10,12 +10,12 @@ fetch("getCotacao").then((response) => {
 
 	const dadosConvertidos = convertData(cotacao);
 	if (dadosConvertidos) {
-		let height = 800,
-			width = 500,
+		let height = 1000,
+			width = 700,
 			legend = 100;
 
 		let svg = d3.select("#tree").attr("width", width).attr("height", height);
-		const color = d3.scaleOrdinal(d3.schemeSet2)
+		const color = d3.scaleOrdinal(d3.schemeSet3)
 		let hierarchy = d3.hierarchy(dadosConvertidos).sum(d => d.valor);
 		let treemap = d3.treemap().size([width, height - legend]).paddingInner(5)(hierarchy);
 
